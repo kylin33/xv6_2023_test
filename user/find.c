@@ -63,7 +63,7 @@ void find(char *path, char *target){
           continue;
         memmove(p, de.name, DIRSIZ);
         p[DIRSIZ] = 0;
-        if(strcmp(de.name, ".") == 0 && strcmp(de.name, "..")!= 0){
+        if(strcmp(de.name, ".") != 0 && strcmp(de.name, "..")!= 0){
           find(buf, target);
         }
       }
